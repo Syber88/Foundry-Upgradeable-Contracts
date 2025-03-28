@@ -17,7 +17,6 @@ contract DeployAndUpgradeTest is Test {
     function testProxyStartsAsBoxV1() public {
         vm.expectRevert();
         BoxV2(proxy).setNumber(100);
-
     }
 
     function setUp() public {
