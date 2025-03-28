@@ -6,7 +6,9 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/contracts/pro
 contract BoxV2 is UUPSUpgradeable {
     uint256 internal number;
 
-    function setNumber() external {}
+    function setNumber(uint256 _newNumber) external {
+        number = _newNumber;
+    }
 
     function getNumber() external view returns (uint256) {
         return number;
