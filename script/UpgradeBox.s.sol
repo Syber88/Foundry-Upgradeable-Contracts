@@ -14,6 +14,7 @@ contract UpgradeBox is Script {
 
         vm.stopBroadcast();
         address proxy = upgradeBox(mostRecentlyDeployed, address(newBox));
+        return proxy;
     }
 
     function upgradeBox(address proxyAddress, address newBox) public returns (address){
