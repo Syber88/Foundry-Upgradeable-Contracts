@@ -7,6 +7,7 @@ contract BoxV2 is UUPSUpgradeable {
     uint256 internal number;
 
     function setNumber() external {}
+
     function getNumber() external view returns (uint256) {
         return number;
     }
@@ -16,5 +17,4 @@ contract BoxV2 is UUPSUpgradeable {
     }
 
     function _authorizeUpgrade(address newImplementation) internal override {}
-
 }

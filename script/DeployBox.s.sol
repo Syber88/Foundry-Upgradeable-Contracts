@@ -9,10 +9,9 @@ contract DeployBox is Script {
     function run() external returns (address) {
         address proxy = deployBox();
         return proxy;
-
     }
 
-    function deployBox() public returns(address) {
+    function deployBox() public returns (address) {
         BoxV1 box = new BoxV1();
         ERC1967Proxy proxy = new ERC1967Proxy(address(box), "");
         return address(proxy);
